@@ -8,21 +8,19 @@
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 #--------------------------
 
-title: Chirpy                          # the main title
+title: EEP0x10                         # the main title
 
-tagline: A text-focused Jekyll theme.  # it will display as the sub-title
+tagline: Just another blog.            # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+  Apenas mais um blog para compartilhar conhecimento.
 
 # Replace with the website url, e.g. 'https://username.github.io'
-url: 'protocol://domain'
+url: 'https://eep0x10.github.io/'
 
 author: your_full_name                  # change to your full name
 
-avatar: /assets/img/sample/avatar.jpg   # support internet resources
+avatar: https://www.pngitem.com/pimgs/m/223-2239394_65-replies-1-446-retweets-4-128-likes.png   # support internet resources
 
 github:
   username: github_username             # change to your github username
@@ -35,8 +33,8 @@ social:
   email: example@doamin.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
+    # https://twitter.com/username      # change to your twitter homepage
+    # https://github.com/username       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -51,7 +49,7 @@ google_site_verification: google_meta_tag_verification # change to your verifica
 baseurl: ''
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Shanghai
+timezone: America/Sao_Paulo
 
 google_analytics:
   id: ''          # Fill with your Google Analytics ID
@@ -78,7 +76,7 @@ disqus:
 #
 #     dark   - Use the dark color scheme
 #
-theme_mode: dual
+theme_mode: dark
 
 # boolean type, global switch for ToC in posts.
 toc: true
