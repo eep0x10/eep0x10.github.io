@@ -8,17 +8,15 @@ tags:
   - test_tag
 pin: true
 ---
-# Como explorar SQL Injection Blind Boolean-Based
+# O'que é SQL Injection
 
-## O'que é SQL Injection
+# Tipos
 
-## Tipos
+# Problemas
 
-## Problemas
+# Exploração Automática
+## SQLMap
 
-## Exploração Automática
-### SQLMap
+# Exploração Manual
 
-## Exploração Manual
-
-## Script
+# Script
