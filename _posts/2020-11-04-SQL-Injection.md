@@ -12,6 +12,8 @@ pin: true
 ---
 Este post tem o objetivo de falar a respeito da vulnerabilidade SQL Injetion e sua exploração, tanto manual quanto por meio de ferramentas automáticas.
 
+
+
 # O'que é SQL Injection
 
 # Tipos
