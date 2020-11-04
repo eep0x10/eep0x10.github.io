@@ -4,9 +4,9 @@ published: true
 ---
 # Sobre mim
 
+20 anos
 Estudante de Ciência da Computação 
 Interesses: 
-- 20 anos
 - Web & Mobile Applications Pentest
 - CTF
 - Python
