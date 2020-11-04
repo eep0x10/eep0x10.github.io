@@ -10,4 +10,5 @@ published: true
 - Python
 - Linux
 - Criei o blog com objetivo de documentar meu aprendizado na área de segurança, compartilhar minhas experiências e falar a respeito de assuntos que tenho interesse, então sinta-se livre para criticar, corrigir ou complementar meus posts, pois  meu maior foco é o aprendizado.
-- No tempo livre gosto de jogar RPG de mesa com meu amigos, jogar Games Retro, jogar HTB e ouvir musicas novas.
+- No momento sou iniciante na área de segurança, mas tenho muito interesse em me desenvolver e aprender mais a respeito.
+- No tempo livre gosto de jogar RPG, Games Retro, HTB e ouvir musicas novas.
