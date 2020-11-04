@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 author: EEP0x10
 date: '2020-11-04'
 categories:
@@ -82,7 +82,7 @@ Gym Management System 1.0 - Unauthenticated Remote Code Execution               
 	6. -> ir para phpmyadmin e pegar as infos**
 
 # Flags
-## User: 2c815f687a999f47a7e23124ec141c02
+## User: ----------------------
 ## Root: 
 
 # Links Úteis
