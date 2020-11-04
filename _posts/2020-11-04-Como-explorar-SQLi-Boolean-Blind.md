@@ -3,9 +3,9 @@ published: true
 author: EEP0x10
 date: '2020-11-03'
 categories:
-  - test_cat
+  - SecInfo
 tags:
-  - test_tag
+  - SQLi
 pin: true
 ---
 # O'que é SQL Injection
