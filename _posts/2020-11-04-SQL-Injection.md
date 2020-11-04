@@ -10,19 +10,15 @@ tags:
   - Owasp top 10
 pin: true
 ---
-Este post tem o objetivo de falar a respeito da vulnerabilidade SQL Injetion e sua exploração, tanto manual quanto por meio de ferramentas automáticas.
-
-
-
-# O'que é SQL Injection
+SQL Injection é...
 
 # Tipos
+1.
+2.
+3.
 
-# Problemas
+# Exploração
 
-# Exploração Automática
-## SQLMap
-
-# Exploração Manual
+# SQLMap
 
 # Script
