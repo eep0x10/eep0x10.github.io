@@ -2,11 +2,9 @@
 title: About
 published: true
 ---
-# Sobre mim
-
-### 20 anos
-### Estudante de Ciência da Computação 
-## Interesses: 
+### Tenho 20 anos
+### Sou um estudante de Ciência da Computação 
+## Tenho interesse em: 
 - Web & Mobile Applications Pentest
 - CTF, HTB, THM
 - Python
