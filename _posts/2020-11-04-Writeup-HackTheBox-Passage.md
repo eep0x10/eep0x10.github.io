@@ -9,7 +9,7 @@ tags:
   - Writeup
   - HTB
 ---
-![](https://www.hackthebox.eu/storage/avatars/ec88bbe570fd512ab370208e5139bb41.png){: width="240" class="right"}
+![Logo](https://www.hackthebox.eu/storage/avatars/ec88bbe570fd512ab370208e5139bb41.png){: width="240" class="right"}
 ## Informações
 |:-----------------------------|:-------------|
 | Sistema Operacional          | Linux        |
