@@ -18,7 +18,7 @@ description: >-                        # used by seo meta and the atom feed
 # Replace with the website url, e.g. 'https://username.github.io'
 url: 'https://eep0x10.github.io/'
 
-author: your_full_name                  # change to your full name
+author: eep0x10                         # change to your full name
 
 avatar: https://www.pngitem.com/pimgs/m/223-2239394_65-replies-1-446-retweets-4-128-likes.png   # support internet resources
 
@@ -76,7 +76,7 @@ disqus:
 #
 #     dark   - Use the dark color scheme
 #
-theme_mode: dark
+theme_mode: dual
 
 # boolean type, global switch for ToC in posts.
 toc: true
