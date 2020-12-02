@@ -198,7 +198,7 @@ whereis python
 python: /usr/bin/python3.5 /usr/bin/python3.5m /usr/bin/python2.7 /usr/bin/python /usr/lib/python3.5 /usr/lib/python2.7 /etc/python3.5 /etc/python2.7 /etc/python /usr/local/lib/python3.5 /usr/local/lib/python2.7 /usr/include/python3.5m /usr/share/python /usr/share/man/man1/python.1.gz
 ```
 
-4- Fazer o upgrade da shell
+4- Fazer o upgrade da shell com python3
 
 ```terminal
 python3 -c "import pty; pty.spawn('/bin/bash')"
