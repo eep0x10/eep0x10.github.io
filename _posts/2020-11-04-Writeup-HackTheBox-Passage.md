@@ -400,7 +400,8 @@ Agora basta logar com o usuário `Paul` e pegar a flag de user.
 $ su paul
 Password: atlanta1
 paul@passage:~$
-
+$ id
+uid=1001(paul) gid=1001(paul) groups=1001(paul)
 $ cd /home/paul
 $ cat user.txt
 ```
@@ -459,6 +460,8 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzXiscFGV3l9T2gvXOkh9w+BpPnhFv5AOPagArgzWD
 $ ssh nadav@127.0.0.1
 Last login: Wed Dec  2 06:30:24 2020 from 127.0.0.1
 nadav@passage:~$
+$ id
+uid=1000(nadav) gid=1000(nadav) groups=1000(nadav),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),113(lpadmin),128(sambashare)
 ```
 
 Agora que somos o usuário `nadav`, precisamos escalar o privilégio para pegar o usuário `root`.
@@ -473,8 +476,10 @@ root       4894  0.0  0.4 235520 19840 ?        Sl   04:16   0:00 /usr/bin/pytho
 . . .
 ```
 
-A técnica que será utilizada, tem como falha o USB-Creator.
+A técnica que será utilizada, tem como falha o USB-Creator D-Bus.
 > https://unit42.paloaltonetworks.com/usbcreator-d-bus-privilege-escalation-in-ubuntu-desktop/
+
+Essa falha permite que um usuário com acesso ao grupo `sudoers` ignore a política de segurança de senha do `sudo`, permitindo o usuário sobrescrever arquivos como root, sem precisar informar a senha.
 
 ## Conclusão
 
