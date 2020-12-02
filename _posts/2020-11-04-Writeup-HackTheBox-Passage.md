@@ -64,4 +64,9 @@ Acessar a url do laboratório na porta 80
 
 http://passage.htb
 
+![Sem título.png]({{site.baseurl}}/_posts/Sem título.png)
+
+
+
+
 
