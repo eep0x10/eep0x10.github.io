@@ -18,6 +18,7 @@ tags:
 | Pontos                       | 30           |
 | Lançamento                   | 05/09/2020   | 
 | IP                           | 10.10.10.206 |
+| Criador                      | [ChefByzen](https://www.hackthebox.eu/home/users/profile/140851) |
 
 ## Hosts
 Adiconar o ip no arquivos "hosts" 
