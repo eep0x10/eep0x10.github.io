@@ -92,7 +92,7 @@ CuteNews aj-fork - 'path' Remote File Inclusion
 CuteNews aj-fork 167f - 'cutepath' Remote File Inclusion
 ```
 
-O Exploit que será utilizado é o CuteNews 2.1.2 - Remote Code Execution | php/webapps/48800.py
+O Exploit que será utilizado é o CuteNews 2.1.2 - Remote Code Execution php/webapps/48800.py
 
 `https://www.exploit-db.com/exploits/48800`
 
