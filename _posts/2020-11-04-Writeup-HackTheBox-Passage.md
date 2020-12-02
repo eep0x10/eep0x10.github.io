@@ -21,7 +21,7 @@ tags:
 | Criador                      | [ChefByzen](https://www.hackthebox.eu/home/users/profile/140851) |
 
 
-> Sistema Usado: Windows + WSL2 Ubuntu
+> Sistema Usado: Windows 10 + WSL2 Ubuntu
 
 ## Hosts
 Adicionar o ip e o domínio no arquivos "hosts" 
