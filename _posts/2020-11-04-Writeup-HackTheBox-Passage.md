@@ -390,7 +390,7 @@ Analyzing 'e26f3e86d1f8108120723ebe690e5d3d61628f4130076ec6cb43f16f497273cd'
 [+] Skein-512(256)
 ```
 Agora basta quebrar o hash.
-> Dica: Vale apena sempre tentar quebrar o hash primeiramente em sites externos (como: https://crackstation.net/), pois o resultado será muito mais veloz do que via hashcat ou john usando uma wordlist. Porém, caso não tenha sucesso em um site externo, provavelmente será necessário criar uma wordlist personalizada para quebrar o hash em questão.
+> Dica: Vale apena sempre tentar quebrar o hash primeiramente em sites externos (como: https://crackstation.net/), pois o resultado será muito mais veloz do que via hashcat ou john usando uma wordlist. Porém, caso não tenha sucesso em um site externo, provavelmente será necessário usar o hashcat ou john e criar uma wordlist personalizada para quebrar o hash em questão.
 
 Quebrando o hash, é possível obter a senha do usuário `Paul`:`atlanta1`
 
