@@ -24,12 +24,12 @@ Ferramenta usada: [Rustscan](https://github.com/RustScan/RustScan)
 ```terminal
 rustscan 10.10.10.206 -- -Pn -sV
 ```
-Resultado 1 : Rustscan
+Resultado 1 : Varrimento de todas as portas
 ```terminal
 Open 10.10.10.206:22
 Open 10.10.10.206:80
 ```
-Resultado 2 : Nmap
+Resultado 2 : Nmap nas portas abertas
 ```terminal
 PORT   STATE SERVICE REASON  VERSION
 22/tcp open  ssh     syn-ack OpenSSH 7.2p2 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
