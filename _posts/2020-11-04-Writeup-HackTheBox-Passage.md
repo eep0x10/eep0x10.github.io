@@ -191,7 +191,7 @@ Ele pode ser verificado por meio do comando para Windows: ipconfig ou para Linux
 3- Verificar se existe python no host remoto
 
 ```terminal
-❯ nc -nvlp 2123
+$ nc -nvlp 2123
 Listening on 0.0.0.0 2123
 Connection received on 10.10.10.206 55058
 whereis python
