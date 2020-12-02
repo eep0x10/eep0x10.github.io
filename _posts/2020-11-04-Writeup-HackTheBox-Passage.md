@@ -42,7 +42,7 @@ Linux: `/etc/hosts`
 ## Scan
 Ferramenta usada: [Rustscan](https://github.com/RustScan/RustScan)
 ```terminal
-$ rustscan 10.10.10.206 -- -Pn -sV
+$ rustscan passage.htb -- -Pn -sV
 ```
 Resultado 1 : Varrimento de todas as portas
 ```terminal
@@ -63,4 +63,5 @@ PORT   STATE SERVICE REASON  VERSION
 Acessar a url do laboratório na porta 80
 
 http://passage.htb
+
 
