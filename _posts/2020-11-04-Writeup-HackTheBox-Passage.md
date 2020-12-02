@@ -151,8 +151,6 @@ Dropping to a SHELL
 command >
 ```
 
-![]({{site.baseurl}}/https://media.makeameme.org/created/rce-rce-everywhere.jpg)
+Pegamos a shell
 
-Pegamos a shell 
-
-
+![](/https://media.makeameme.org/created/rce-rce-everywhere.jpg)
