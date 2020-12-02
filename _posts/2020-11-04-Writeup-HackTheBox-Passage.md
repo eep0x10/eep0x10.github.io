@@ -445,6 +445,7 @@ drwxr-xr-x  2 paul paul 4096 Jul 21 10:44 Videos
 Dentro do diretório .ssh, existe a chave pública do usuário `nadav`, portanto basta apenas conectarmos no usuário.
 
 ```terminal
+$ ls -la
 -rw-r--r--  1 paul paul  395 Jul 21 10:43 authorized_keys
 -rw-------  1 paul paul 1679 Jul 21 10:43 id_rsa
 -rw-r--r--  1 paul paul  395 Jul 21 10:43 id_rsa.pub
