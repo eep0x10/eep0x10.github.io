@@ -399,6 +399,8 @@ Agora basta logar com o usuário `Paul` e pegar a flag de user.
 ```terminal
 $ su paul
 Password: atlanta1
+$whoami
+paul
 $ cd /home/paul
 $ cat user.txt
 ```
