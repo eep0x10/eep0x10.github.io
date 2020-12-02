@@ -52,6 +52,6 @@ PORT   STATE SERVICE REASON  VERSION
 80/tcp open  http    syn-ack Apache httpd 2.4.18 ((Ubuntu))
 ```
 
-> O **rustscan** é usado com a função de ***varrer todas as portas de um host rapidamente***, e em seguida, **ele mesmo executa o nmap***, utilizando os parâmetros definidos após o **--**, realizando nesse caso um Service / Version Scan (-sV) nas portas abertas.
+> O **rustscan** é usado com a função de ***varrer todas as portas de um host rapidamente***, e em seguida, **ele mesmo executa o nmap**, utilizando os parâmetros definidos após o "**--**", realizando nesse caso um Service / Version Scan (-sV) nas portas abertas.
 
 ## Enumeração
