@@ -491,6 +491,7 @@ $ gdbus call --system --dest com.ubuntu.USBCreator --object-path /com/ubuntu/USB
 $ cat /tmp/flag
 ~flag root~
 ```
+
 ## Conclusão
 
 
