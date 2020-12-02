@@ -19,10 +19,10 @@
   path: tabs
   url: tags
 -
-  name: "Archives"
-  path: tabs
-  url: archives
-  icon: "fas fa-archive"
+#  name: "Archives"
+#  path: tabs
+#  url: archives
+#  icon: "fas fa-archive"
 -
   name: "About"
   icon: "fas fa-info"
