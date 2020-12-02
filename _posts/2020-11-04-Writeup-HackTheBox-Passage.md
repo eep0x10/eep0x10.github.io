@@ -153,4 +153,4 @@ command >
 
 Pegamos a shell
 
-![](/https://media.makeameme.org/created/rce-rce-everywhere.jpg)
+![RCE](/https://media.makeameme.org/created/rce-rce-everywhere.jpg)
