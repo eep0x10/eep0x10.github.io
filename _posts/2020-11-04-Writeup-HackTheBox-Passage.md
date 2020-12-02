@@ -67,9 +67,9 @@ Acessar a url do laboratório na porta 80
 
 ![Sem título.png](/assets/img/sample/passage1.png)
 
-Ao acessar a aplicação web, no canto inferior do site é possível notar uma informação importante a respeito do site, o CMS que ela é feita.
+Ao acessar a aplicação web, no canto inferior do site é possível verificar que a aplicação é feita pelo CMS Cute PHP.
 
-![Sem título2.png](/assets/img/sample/Passage2.png)
+![Sem título2.png](/assets/img/sample/passage3.png)
 
 
 CMS: `https://cutephp.com/`
