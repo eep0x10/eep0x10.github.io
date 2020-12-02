@@ -22,8 +22,8 @@ tags:
 ## Hosts
 Adiconar o ip no arquivos "hosts" 
 
-Para windows: `C:\Windows\System32\drivers\etc\hosts`
-Para Linux: `/etc/hosts`
+Windows: `C:\Windows\System32\drivers\etc\hosts`
+Linux: `/etc/hosts`
 
 > É necessário **admin** / **root** para editar o arquivo
 
