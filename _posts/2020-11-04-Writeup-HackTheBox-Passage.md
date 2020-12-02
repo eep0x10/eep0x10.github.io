@@ -62,7 +62,7 @@ PORT   STATE SERVICE REASON  VERSION
 
 Acessar a url do laboratório na porta 80
 
-http://passage.htb
+`http://passage.htb`
 
 ![Sem título.png](/_posts/Sem título.png)
 
