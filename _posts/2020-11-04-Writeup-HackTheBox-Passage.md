@@ -67,10 +67,10 @@ Acessar a url do laboratório na porta 80
 
 ![Sem título.png](/assets/img/sample/passage1.png)
 
-Ao acessar a aplicação web, no canto inferior do site é possível notar uma informação importante a respeito do site.
+Ao acessar a aplicação web, no canto inferior do site é possível notar uma informação importante a respeito do site, o CMS que ela é feita.
 
 ![Sem título2.png](/assets/img/sample/Passage2.png)
 
-
+`https://cutephp.com/`
 
 
