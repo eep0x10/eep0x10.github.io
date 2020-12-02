@@ -151,9 +151,9 @@ Dropping to a SHELL
 command >
 ```
 
-Pegamos o RCE
+Pegamos a shell
 
-![RCE](https://media.makeameme.org/created/rce-rce-everywhere.jpg)
+![Shell](https://i.redd.it/8wlaab8isi611.jpg)
 
 ## Post-Exploitation
 
