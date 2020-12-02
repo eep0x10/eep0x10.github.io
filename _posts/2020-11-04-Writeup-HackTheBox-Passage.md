@@ -213,3 +213,16 @@ Agora que estamos com a shell melhorada, podemos verificar que somos o usuário 
 $ whoami
 www-data
 ```
+
+#### Enumeration II
+
+#### User.txt
+
+#### Root.txt
+
+## Conclusão
+
+
+
+
+
