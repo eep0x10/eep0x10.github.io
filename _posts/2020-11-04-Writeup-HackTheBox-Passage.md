@@ -67,7 +67,9 @@ Acessar a url do laboratório na porta 80
 
 ![Sem título.png](/assets/img/sample/passage1.png)
 
+Ao acessar a aplicação web, no canto inferior do site é possível notar uma informação importante a respeito do site.
 
+![Sem título.png](/assets/img/sample/passage2.png)
 
 
 
