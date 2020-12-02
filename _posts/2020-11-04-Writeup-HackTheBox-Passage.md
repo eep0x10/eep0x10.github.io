@@ -20,6 +20,9 @@ tags:
 | IP                           | 10.10.10.206 |
 | Criador                      | [ChefByzen](https://www.hackthebox.eu/home/users/profile/140851) |
 
+
+> Sistema Usado: Windows + WSL2 Ubuntu
+
 ## Hosts
 Adicionar o ip e o domínio no arquivos "hosts" 
 
@@ -56,3 +59,7 @@ PORT   STATE SERVICE REASON  VERSION
 > O **rustscan** é usado com a função de ***varrer todas as portas de um host rapidamente***, e em seguida, **ele mesmo executa o nmap**, utilizando os parâmetros definidos após o "**--**", realizando nesse caso um Service / Version Scan (-sV) nas portas abertas.
 
 ## Enumeração
+
+Acessar a url do laboratório na porta 80
+http://passage.htb
+
