@@ -463,7 +463,18 @@ nadav@passage:~$
 
 Agora que somos o usuário `nadav`, precisamos escalar o privilégio para pegar o usuário `root`.
 
-Para pegar o usuário root, 
+Enumerando a máquina, podemos ver um processo interessante sendo executado.
+> Dica: Para enumerar a máquina, e tentar descobrir possíveis brechas, pode-se utilizar scripts como [lienum](https://github.com/rebootuser/LinEnum) ou [linpeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS), que precisam ser transferidos e executados na máquina alvo.
+
+```terminal
+$ ps aux
+. . .
+root       4894  0.0  0.4 235520 19840 ?        Sl   04:16   0:00 /usr/bin/python3 /usr/share/usb-creator/usb-creator-helper
+. . .
+```
+
+A técnica que será utilizada, tem como falha o USB-Creator.
+https://unit42.paloaltonetworks.com/usbcreator-d-bus-privilege-escalation-in-ubuntu-desktop/
 
 ## Conclusão
 
