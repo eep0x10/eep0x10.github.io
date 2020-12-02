@@ -151,6 +151,6 @@ Dropping to a SHELL
 command >
 ```
 
-Pegamos a shell
+Pegamos o RCE
 
 ![RCE](https://media.makeameme.org/created/rce-rce-everywhere.jpg)
