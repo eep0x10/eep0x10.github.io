@@ -33,7 +33,7 @@ Linux: `/etc/hosts`
 10.10.10.206	passage.htb
 ```
 
-> **Dica**: Em windows pode-se usar o ***notepad++*** para editar esse arquivo, pois o mesmo consegue salvar / editar com permissões administrativas. Enquanto em linux, é necessário editar o arquivo com **sudo** nano /etc/hosts
+> **Dica**: Em windows pode-se usar o ***notepad++*** para editar esse arquivo, pois o mesmo consegue salvar / editar com permissões administrativas. Enquanto em linux, é necessário editar o arquivo com **sudo** nano /etc/hosts .
 
 
 ## Scan
