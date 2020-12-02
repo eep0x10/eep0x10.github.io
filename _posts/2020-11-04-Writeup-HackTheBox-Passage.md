@@ -64,7 +64,7 @@ Acessar a url do laboratório na porta 80
 
 `http://passage.htb`
 
-![Sem título.png](/Sem título.png)
+![Sem título.png](../../../../_posts/Sem título.png)
 
 
 
