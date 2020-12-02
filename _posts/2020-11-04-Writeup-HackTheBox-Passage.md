@@ -61,5 +61,6 @@ PORT   STATE SERVICE REASON  VERSION
 ## Enumeração
 
 Acessar a url do laboratório na porta 80
+
 http://passage.htb
 
