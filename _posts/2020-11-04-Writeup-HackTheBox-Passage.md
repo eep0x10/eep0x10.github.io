@@ -500,6 +500,6 @@ $ cat /tmp/flag
 ~flag root~
 ```
 
-![]({{site.baseurl}}/https://memegenerator.net/img/instances/41953756/get-rooted-feel-the-power.jpg)
+![root]({{site.baseurl}}/https://memegenerator.net/img/instances/41953756/get-rooted-feel-the-power.jpg)
 
 
