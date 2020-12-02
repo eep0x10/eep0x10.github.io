@@ -21,13 +21,16 @@ tags:
 
 ## Hosts
 Adiconar o ip no arquivos "hosts" 
+
 > É necessário **admin** / **root** para editar o arquivo
+
 ```
 10.10.10.206	passage.htb
 ```
 Para windows: C:\Windows\System32\drivers\etc\hosts
 
 Para Linux: /etc/hosts
+
 > **Dica**: Em windows pode-se usar o ***notepad++*** para editar esse arquivo, pois o mesmo consegue salvar / editar com permissões administrativas.
 
 
@@ -47,6 +50,7 @@ PORT   STATE SERVICE REASON  VERSION
 22/tcp open  ssh     syn-ack OpenSSH 7.2p2 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
 80/tcp open  http    syn-ack Apache httpd 2.4.18 ((Ubuntu))
 ```
+
 > O **rustscan** é usado com a função de ***varrer todas as portas de um host rapidamente***, e em seguida, **ele mesmo executa o nmap***, utilizando os parâmetros definidos após o **--**, realizando nesse caso um Service / Version Scan (-sV) nas portas abertas.
 
 ## Enumeração
