@@ -22,14 +22,14 @@ tags:
 ## Hosts
 Adiconar o ip no arquivos "hosts" 
 
+Para windows: `C:\Windows\System32\drivers\etc\hosts`
+Para Linux: `/etc/hosts`
+
 > É necessário **admin** / **root** para editar o arquivo
 
 ```
 10.10.10.206	passage.htb
 ```
-Para windows: C:\Windows\System32\drivers\etc\hosts
-
-Para Linux: /etc/hosts
 
 > **Dica**: Em windows pode-se usar o ***notepad++*** para editar esse arquivo, pois o mesmo consegue salvar / editar com permissões administrativas.
 
