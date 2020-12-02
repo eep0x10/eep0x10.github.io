@@ -215,7 +215,7 @@ www-data
 ```
 
 #### Enumeration II
-Conseguimos verificar que existem outros 2 usuários no sistema (além do root), `paul` e `nadav`
+Conseguimos verificar que existem outros 2 usuários no sistema (além do root), `paul` e `nadav`.
 Ambos diretórios são inacessíveis para o usuário `www-data`, portanto precisamos ganhar acesso a um deles.
 
 ```terminal
@@ -304,7 +304,7 @@ drwxrwxrwx  2 www-data www-data  4096 Dec  2 04:54 users
 -rw-r--r--  1 www-data www-data   144 Dec  2 04:54 users.txt
 ```
 
-Dentro do diretório users, podemos verificar que existem vários arquivos .php, em dois outros arquivos.
+Dentro do diretório users, podemos verificar que existem vários arquivos .php, e dois outros arquivos.
 ```terminal
 $ ls
 09.php  18.php  41.php  5a.php  6e.php  8b.php  a8.php  d6.php  users.txt
