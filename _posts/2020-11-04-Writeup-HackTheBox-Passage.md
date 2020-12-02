@@ -207,4 +207,9 @@ www-data@passage:/var/www/html/CuteNews/uploads$
 
 ### Privilege Escalation
 
+Agora que estamos com a shell melhorada, podemos verificar que somos o usuário www-data no sistema.
 
+```terminal
+$ whoami
+www-data
+```
