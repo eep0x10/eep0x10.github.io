@@ -192,7 +192,7 @@ Ele pode ser verificado por meio do comando para Windows: ipconfig ou para Linux
 
 ```terminal
 $ nc -nvlp 2123
-Listening on 0.0.0.0 2123
+Listening on 0.0.0.0 YYYY
 Connection received on 10.10.10.206 55058
 whereis python
 python: /usr/bin/python3.5 /usr/bin/python3.5m /usr/bin/python2.7 /usr/bin/python /usr/lib/python3.5 /usr/lib/python2.7 /etc/python3.5 /etc/python2.7 /etc/python /usr/local/lib/python3.5 /usr/local/lib/python2.7 /usr/include/python3.5m /usr/share/python /usr/share/man/man1/python.1.gz
