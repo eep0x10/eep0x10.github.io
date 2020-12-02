@@ -399,13 +399,68 @@ Agora basta logar com o usuário `Paul` e pegar a flag de user.
 ```terminal
 $ su paul
 Password: atlanta1
-$whoami
-paul
+paul@passage:~$
+
 $ cd /home/paul
 $ cat user.txt
 ```
 
 #### Root.txt
+
+Agora precisamos escalar o privilégio para o usuário `nadav`.
+
+Dentro do diretório do paul, é possível perceber a pasta `.ssh`, a qual contém suas configurações do ssh.
+```terminal
+$ ls -la
+total 112
+drwxr-x--- 16 paul paul 4096 Sep  2 07:18 .
+drwxr-xr-x  4 root root 4096 Jul 21 10:43 ..
+----------  1 paul paul    0 Jul 21 10:44 .bash_history
+-rw-r--r--  1 paul paul  220 Aug 31  2015 .bash_logout
+-rw-r--r--  1 paul paul 3770 Jul 21 10:44 .bashrc
+drwx------ 10 paul paul 4096 Sep  1 02:10 .cache
+drwx------ 14 paul paul 4096 Aug 24 07:12 .config
+drwxr-xr-x  2 paul paul 4096 Jul 21 10:44 Desktop
+-rw-r--r--  1 paul paul   25 Aug 24 07:11 .dmrc
+drwxr-xr-x  2 paul paul 4096 Jul 21 10:44 Documents
+drwxr-xr-x  2 paul paul 4096 Jul 21 10:44 Downloads
+-rw-r--r--  1 paul paul 8980 Apr 20  2016 examples.desktop
+drwx------  2 paul paul 4096 Aug 24 07:13 .gconf
+drwx------  3 paul paul 4096 Sep  2 07:19 .gnupg
+-rw-------  1 paul paul 1292 Sep  2 07:18 .ICEauthority
+drwx------  3 paul paul 4096 Aug 24 07:11 .local
+drwxr-xr-x  2 paul paul 4096 Jul 21 10:44 Music
+drwxr-xr-x  2 paul paul 4096 Jul 21 10:44 Pictures
+-rw-r--r--  1 paul paul  655 May 16  2017 .profile
+drwxr-xr-x  2 paul paul 4096 Jul 21 10:44 Public
+drwxr-xr-x  2 paul paul 4096 Jul 21 10:43 .ssh
+drwxr-xr-x  2 paul paul 4096 Jul 21 10:44 Templates
+-r--------  1 paul paul   33 Dec  1 21:52 user.txt
+drwxr-xr-x  2 paul paul 4096 Jul 21 10:44 Videos
+-rw-------  1 paul paul   52 Sep  2 07:18 .Xauthority
+-rw-------  1 paul paul 1228 Sep  2 07:19 .xsession-errors
+-rw-------  1 paul paul 1397 Sep  1 04:20 .xsession-errors.ol
+```
+
+Dentro do diretório .ssh, existe a chave pública para o usuário `nadav`, portanto basta apenas conectarmos no usuário.
+
+```terminal
+-rw-r--r--  1 paul paul  395 Jul 21 10:43 authorized_keys
+-rw-------  1 paul paul 1679 Jul 21 10:43 id_rsa
+-rw-r--r--  1 paul paul  395 Jul 21 10:43 id_rsa.pub
+-rw-r--r--  1 paul paul 1534 Dec  2 06:28 known_hosts
+```
+
+```terminal
+$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzXiscFGV3l9T2gvXOkh9w+BpPnhFv5AOPagArgzWDk9uUq7/4v4kuzso/lAvQIg2gYaEHlDdpqd9gCYA7tg76N5RLbroGqA6Po91Q69PQadLsziJnYumbhClgPLGuBj06YKDktI3bo/H3jxYTXY3kfIUKo3WFnoVZiTmvKLDkAlO/+S2tYQa7wMleSR01pP4VExxPW4xDfbLnnp9zOUVBpdCMHl8lRdgogOQuEadRNRwCdIkmMEY5efV3YsYcwBwc6h/ZB4u8xPyH3yFlBNR7JADkn7ZFnrdvTh3OY+kLEr6FuiSyOEWhcPybkM5hxdL9ge9bWreSfNC1122qq49d nadav@passage
+$ ssh nadav@127.0.0.1
+Last login: Wed Dec  2 06:30:24 2020 from 127.0.0.1
+nadav@passage:~$
+```
+
+Agora que somos o usuário `nadav`, precisamos escalar o privilégio para pegar o usuário `root`.
+
 
 ## Conclusão
 
