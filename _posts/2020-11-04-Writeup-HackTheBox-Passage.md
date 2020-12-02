@@ -374,6 +374,8 @@ a:1:{s:4:"name";a:1:{s:10:"paul-coles";a:9:{s:2:"id";s:10:"1592483236";s:4:"name
 
 Vendo que tipo de hash é, podemos verificar que é provavelmente um SHA-256
 
+> Dica: Para descobrir o tipo de um hash, é possível fazer pela linha de comando com o hashid ou por um site externo, como: https://www.tunnelsup.com/hash-analyzer/
+
 ```
 $ hashid -m -j e26f3e86d1f8108120723ebe690e5d3d61628f4130076ec6cb43f16f497273cd
 Analyzing 'e26f3e86d1f8108120723ebe690e5d3d61628f4130076ec6cb43f16f497273cd'
@@ -387,7 +389,18 @@ Analyzing 'e26f3e86d1f8108120723ebe690e5d3d61628f4130076ec6cb43f16f497273cd'
 [+] Skein-256 [JtR Format: skein-256]
 [+] Skein-512(256)
 ```
+Agora basta quebrar o hash.
+> Dica: Vale apena sempre tentar quebrar o hash primeiramente em sites externos (como: https://crackstation.net/), pois o resultado será muito mais veloz do que via hashcat ou john usando uma wordlist. Porém, caso não tenha sucesso em um site externo, provavelmente será necessário criar uma wordlist personalizada para quebrar o hash em questão.
 
+Quebrando o hash, é possível obter a senha do usuário Paul: `atlanta1`
+
+Agora basta locar com o usuário e pegar a flag de user.
+```terminal
+$ su paul
+Password: atlanta1
+$ cd /home/paul
+$ cat user.txt
+```
 
 #### Root.txt
 
