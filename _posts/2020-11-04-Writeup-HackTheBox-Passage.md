@@ -372,7 +372,7 @@ a:1:{s:4:"name";a:1:{s:10:"paul-coles";a:9:{s:2:"id";s:10:"1592483236";s:4:"name
 "pass";s:64:"e26f3e86d1f8108120723ebe690e5d3d61628f4130076ec6cb43f16f497273cd";
 ```
 
-Vendo que tipo de hash é, podemos verificar que é provavelmente um SHA-256
+Podemos ver que é provavelmente um hash `SHA-256`.
 
 > Dica: Para descobrir o tipo de um hash, é possível fazer pela linha de comando com o hashid ou por um site externo, como: https://www.tunnelsup.com/hash-analyzer/
 
