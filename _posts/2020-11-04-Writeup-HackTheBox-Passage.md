@@ -474,7 +474,7 @@ root       4894  0.0  0.4 235520 19840 ?        Sl   04:16   0:00 /usr/bin/pytho
 ```
 
 A técnica que será utilizada, tem como falha o USB-Creator.
-https://unit42.paloaltonetworks.com/usbcreator-d-bus-privilege-escalation-in-ubuntu-desktop/
+> https://unit42.paloaltonetworks.com/usbcreator-d-bus-privilege-escalation-in-ubuntu-desktop/
 
 ## Conclusão
 
