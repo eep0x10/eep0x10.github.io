@@ -410,6 +410,7 @@ $ cat user.txt
 Agora precisamos escalar o privilégio para o usuário `nadav`.
 
 Dentro do diretório do paul, é possível perceber a pasta `.ssh`, a qual contém suas configurações do ssh.
+
 ```terminal
 $ ls -la
 total 112
@@ -462,6 +463,7 @@ nadav@passage:~$
 
 Agora que somos o usuário `nadav`, precisamos escalar o privilégio para pegar o usuário `root`.
 
+Para pegar o usuário root, 
 
 ## Conclusão
 
