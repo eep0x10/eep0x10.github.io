@@ -215,8 +215,145 @@ www-data
 ```
 
 #### Enumeration II
+Conseguimos verificar que existem outros 2 usuários no sistema (além do root), `paul` e `nadav`
+Ambos diretórios são inacessíveis para o usuário `www-data`, portanto precisamos ganhar acesso a um deles.
+
+```terminal
+$ ls -la /home
+drwxr-x--- 17 nadav nadav 4096 Dec  1 21:51 nadav
+drwxr-x--- 16 paul  paul  4096 Sep  2 07:18 paul
+$ cd /home/paul
+bash: cd: /home/paul: Permission denied
+```
 
 #### User.txt
+Podemos verificar que estamos dentro dos diretórios do CMS Cute News
+
+```terminal
+$ pwd
+/var/www/html/CuteNews/uploads
+```
+
+No diretório anterior, podemos ver toda a árvore de diretórios do CMS
+
+```terminal
+$ ls -la /var/www/html/CuteNews
+-rw-rw-r--  1 www-data www-data  7373 Aug 20  2018 LGPL_CKeditor.txt
+-rw-rw-r--  1 www-data www-data  3119 Aug 20  2018 LICENSE.txt
+-rw-rw-r--  1 www-data www-data  2523 Aug 20  2018 README.md
+-rwxrwxr-x  1 www-data www-data   490 Aug 20  2018 captcha.php
+drwxrwxrwx 11 www-data www-data  4096 Dec  2 04:54 cdata
+-rwxrwxr-x  1 www-data www-data   941 Aug 20  2018 cn_api.php
+drwxrwxr-x  9 www-data www-data  4096 Jun 18 12:49 core
+drwxrwxr-x  2 www-data www-data  4096 Aug 20  2018 docs
+-rwxrwxr-x  1 www-data www-data 11039 Aug 20  2018 example.php
+-rwxrwxr-x  1 www-data www-data  1861 Aug 20  2018 example_fb.php
+-rw-rw-r--  1 www-data www-data  1150 Aug 20  2018 favicon.ico
+-rwxrwxr-x  1 www-data www-data   516 Aug 20  2018 index.php
+drwxrwxr-x  9 www-data www-data  4096 Aug 20  2018 libs
+drwxrwxr-x  3 www-data www-data  4096 Aug 20  2018 migrations
+-rwxrwxr-x  1 www-data www-data  1189 Aug 20  2018 popup.php
+-rwxrwxr-x  1 www-data www-data   357 Aug 20  2018 print.php
+-rwxrwxr-x  1 www-data www-data  1593 Aug 20  2018 rss.php
+-rwxrwxr-x  1 www-data www-data  8888 Aug 20  2018 search.php
+-rwxrwxr-x  1 www-data www-data  1031 Aug 20  2018 show_archives.php
+-rwxrwxr-x  1 www-data www-data  3370 Aug 20  2018 show_news.php
+drwxrwxr-x  5 www-data www-data  4096 Aug 20  2018 skins
+-rwxrwxr-x  1 www-data www-data  1275 Aug 20  2018 snippet.php
+drwxrwxrwx  2 www-data www-data  4096 Dec  2 04:54 uploads
+```
+
+LIstando todos os diretórios, um que parece ser interessante é o `cdata`.
+
+Listando o diretório cdata, podemos encontrar outro diretório interessante, `users`.
+
+```terminal
+$ ls -la /var/www/html/CuteNews/cdata
+-rw-rw-rw-  1 www-data www-data  2132 Aug 20  2018 Default.tpl
+-rw-rw-rw-  1 www-data www-data  1699 Aug 20  2018 Headlines.tpl
+drwxrwxrwx  2 www-data www-data  4096 Aug 20  2018 archives
+-rwxrwxrwx  1 www-data www-data     0 Aug 20  2018 auto_archive.db.php
+drwxrwxrwx  2 www-data www-data  4096 Jun 18 09:18 backup
+drwxrwxrwx  2 www-data www-data  4096 Dec  1 23:49 btree
+drwxrwxrwx  2 www-data www-data  4096 Aug 20  2018 cache
+-rwxrwxrwx  1 www-data www-data     0 Aug 20  2018 cat.num.php
+-rwxrwxrwx  1 www-data www-data     0 Aug 20  2018 category.db.php
+-rw-rw-rw-  1 www-data www-data     0 Aug 20  2018 comments.txt
+-rwxr-xr-x  1 www-data www-data 32964 Jun 18 09:18 conf.php
+-rwxrwxrwx  1 www-data www-data  1710 Aug 20  2018 config.php
+-rwxrwxrwx  1 www-data www-data    15 Aug 20  2018 confirmations.php
+-rwxrwxrwx  1 www-data www-data     0 Aug 20  2018 csrf.php
+-rwxrwxrwx  1 www-data www-data     0 Aug 20  2018 flood.db.php
+-rw-r--r--  1 www-data www-data    23 Dec  1 23:49 flood.txt
+-rwxrwxrwx  1 www-data www-data     0 Aug 20  2018 idnews.db.php
+-rw-rw-rw-  1 www-data www-data     0 Aug 20  2018 installed.mark
+-rwxrwxrwx  1 www-data www-data     0 Aug 20  2018 ipban.db.php
+drwxrwxrwx  2 www-data www-data  4096 Jun 18 09:18 log
+drwxrwxrwx  2 www-data www-data  4096 Dec  1 23:49 news
+-rw-rw-rw-  1 www-data www-data     0 Aug 20  2018 news.txt
+-rw-rw-rw-  1 www-data www-data     0 Aug 20  2018 newsid.txt
+drwxrwxrwx  2 www-data www-data  4096 Jun 18 09:18 plugins
+-rw-rw-rw-  1 www-data www-data     0 Aug 20  2018 postponed_news.txt
+-rwxrwxrwx  1 www-data www-data     0 Aug 20  2018 replaces.php
+-rw-rw-rw-  1 www-data www-data   564 Aug 20  2018 rss.tpl
+-rwxrwxrwx  1 www-data www-data     0 Aug 20  2018 rss_config.php
+drwxrwxrwx  2 www-data www-data  4096 Aug 20  2018 template
+-rw-rw-rw-  1 www-data www-data     0 Aug 20  2018 unapproved_news.txt
+drwxrwxrwx  2 www-data www-data  4096 Dec  2 04:54 users
+-rwxrwxrwx  1 www-data www-data    58 Aug 20  2018 users.db.php
+-rw-r--r--  1 www-data www-data   144 Dec  2 04:54 users.txt
+```
+
+Dentro do diretório users, podemos verificar que existem vários arquivos .php, em dois outros arquivos.
+```terminal
+$ ls
+09.php  18.php  41.php  5a.php  6e.php  8b.php  a8.php  d6.php  users.txt
+0a.php  1f.php  4e.php  5d.php  77.php  8f.php  b0.php  df.php
+0c.php  21.php  50.php  61.php  79.php  95.php  c8.php  e2.php
+13.php  2a.php  52.php  62.php  7a.php  96.php  cc.php  eb.php
+14.php  32.php  54.php  66.php  7b.php  97.php  d4.php  fc.php
+16.php  37.php  56.php  6b.php  87.php  9c.php  d5.php  lines
+```
+
+Porém, o arquivo `users.txt` está vazio, então vamos ver o arquivo `lines`
+
+```terminal
+$ cat lines
+<?php die('Direct call - access denied'); ?>
+YToxOntzOjU6ImVtYWlsIjthOjE6e3M6MTY6InBhdWxAcGFzc2FnZS5odGIiO3M6MTA6InBhdWwtY29sZXMiO319
+<?php die('Direct call - access denied'); ?>
+YToxOntzOjI6ImlkIjthOjE6e2k6MTU5ODgyOTgzMztzOjY6ImVncmU1NSI7fX0=
+<?php die('Direct call - access denied'); ?>
+YToxOntzOjU6ImVtYWlsIjthOjE6e3M6MTU6ImVncmU1NUB0ZXN0LmNvbSI7czo2OiJlZ3JlNTUiO319
+<?php die('Direct call - access denied'); ?>
+YToxOntzOjQ6Im5hbWUiO2E6MTp7czo1OiJhZG1pbiI7YTo4OntzOjI6ImlkIjtzOjEwOiIxNTkyNDgzMDQ3IjtzOjQ6Im5hbWUiO3M6NToiYWRtaW4iO3M6MzoiYWNsIjtzOjE6IjEiO3M6NToiZW1haWwiO3M6MTc6Im5hZGF2QHBhc3NhZ2UuaHRiIjtzOjQ6InBhc3MiO3M6NjQ6IjcxNDRhOGI1MzFjMjdhNjBiNTFkODFhZTE2YmUzYTgxY2VmNzIyZTExYjQzYTI2ZmRlMGNhOTdmOWUxNDg1ZTEiO3M6MzoibHRzIjtzOjEwOiIxNTkyNDg3OTg4IjtzOjM6ImJhbiI7czoxOiIwIjtzOjM6ImNudCI7czoxOiIyIjt9fX0=
+<?php die('Direct call - access denied'); ?>
+YToxOntzOjI6ImlkIjthOjE6e2k6MTU5MjQ4MzI4MTtzOjk6InNpZC1tZWllciI7fX0=
+<?php die('Direct call - access denied'); ?>
+YToxOntzOjU6ImVtYWlsIjthOjE6e3M6MTc6Im5hZGF2QHBhc3NhZ2UuaHRiIjtzOjU6ImFkbWluIjt9fQ==
+<?php die('Direct call - access denied'); ?>
+YToxOntzOjU6ImVtYWlsIjthOjE6e3M6MTU6ImtpbUBleGFtcGxlLmNvbSI7czo5OiJraW0tc3dpZnQiO319
+<?php die('Direct call - access denied'); ?>
+YToxOntzOjI6ImlkIjthOjE6e2k6MTU5MjQ4MzIzNjtzOjEwOiJwYXVsLWNvbGVzIjt9fQ==
+<?php die('Direct call - access denied'); ?>
+YToxOntzOjQ6Im5hbWUiO2E6MTp7czo5OiJzaWQtbWVpZXIiO2E6OTp7czoyOiJpZCI7czoxMDoiMTU5MjQ4MzI4MSI7czo0OiJuYW1lIjtzOjk6InNpZC1tZWllciI7czozOiJhY2wiO3M6MToiMyI7czo1OiJlbWFpbCI7czoxNToic2lkQGV4YW1wbGUuY29tIjtzOjQ6Im5pY2siO3M6OToiU2lkIE1laWVyIjtzOjQ6InBhc3MiO3M6NjQ6IjRiZGQwYTBiYjQ3ZmM5ZjY2Y2JmMWE4OTgyZmQyZDM0NGQyYWVjMjgzZDFhZmFlYmI0NjUzZWMzOTU0ZGZmODgiO3M6MzoibHRzIjtzOjEwOiIxNTkyNDg1NjQ1IjtzOjM6ImJhbiI7czoxOiIwIjtzOjM6ImNudCI7czoxOiIyIjt9fX0=
+<?php die('Direct call - access denied'); ?>
+YToxOntzOjI6ImlkIjthOjE6e2k6MTU5MjQ4MzA0NztzOjU6ImFkbWluIjt9fQ==
+<?php die('Direct call - access denied'); ?>
+YToxOntzOjU6ImVtYWlsIjthOjE6e3M6MTU6InNpZEBleGFtcGxlLmNvbSI7czo5OiJzaWQtbWVpZXIiO319
+<?php die('Direct call - access denied'); ?>
+YToxOntzOjQ6Im5hbWUiO2E6MTp7czoxMDoicGF1bC1jb2xlcyI7YTo5OntzOjI6ImlkIjtzOjEwOiIxNTkyNDgzMjM2IjtzOjQ6Im5hbWUiO3M6MTA6InBhdWwtY29sZXMiO3M6MzoiYWNsIjtzOjE6IjIiO3M6NToiZW1haWwiO3M6MTY6InBhdWxAcGFzc2FnZS5odGIiO3M6NDoibmljayI7czoxMDoiUGF1bCBDb2xlcyI7czo0OiJwYXNzIjtzOjY0OiJlMjZmM2U4NmQxZjgxMDgxMjA3MjNlYmU2OTBlNWQzZDYxNjI4ZjQxMzAwNzZlYzZjYjQzZjE2ZjQ5NzI3M2NkIjtzOjM6Imx0cyI7czoxMDoiMTU5MjQ4NTU1NiI7czozOiJiYW4iO3M6MToiMCI7czozOiJjbnQiO3M6MToiMiI7fX19
+<?php die('Direct call - access denied'); ?>
+YToxOntzOjQ6Im5hbWUiO2E6MTp7czo5OiJraW0tc3dpZnQiO2E6OTp7czoyOiJpZCI7czoxMDoiMTU5MjQ4MzMwOSI7czo0OiJuYW1lIjtzOjk6ImtpbS1zd2lmdCI7czozOiJhY2wiO3M6MToiMyI7czo1OiJlbWFpbCI7czoxNToia2ltQGV4YW1wbGUuY29tIjtzOjQ6Im5pY2siO3M6OToiS2ltIFN3aWZ0IjtzOjQ6InBhc3MiO3M6NjQ6ImY2NjlhNmY2OTFmOThhYjA1NjIzNTZjMGNkNWQ1ZTdkY2RjMjBhMDc5NDFjODZhZGNmY2U5YWYzMDg1ZmJlY2EiO3M6MzoibHRzIjtzOjEwOiIxNTkyNDg3MDk2IjtzOjM6ImJhbiI7czoxOiIwIjtzOjM6ImNudCI7czoxOiIzIjt9fX0=
+<?php die('Direct call - access denied'); ?>
+<?php die('Direct call - access denied'); ?>
+<?php die('Direct call - access denied'); ?>
+YToxOntzOjQ6Im5hbWUiO2E6MTp7czo2OiJlZ3JlNTUiO2E6MTE6e3M6MjoiaWQiO3M6MTA6IjE1OTg4Mjk4MzMiO3M6NDoibmFtZSI7czo2OiJlZ3JlNTUiO3M6MzoiYWNsIjtzOjE6IjQiO3M6NToiZW1haWwiO3M6MTU6ImVncmU1NUB0ZXN0LmNvbSI7czo0OiJuaWNrIjtzOjY6ImVncmU1NSI7czo0OiJwYXNzIjtzOjY0OiI0ZGIxZjBiZmQ2M2JlMDU4ZDRhYjA0ZjE4ZjY1MzMxYWMxMWJiNDk0YjU3OTJjNDgwZmFmN2ZiMGM0MGZhOWNjIjtzOjQ6Im1vcmUiO3M6NjA6IllUb3lPbnR6T2pRNkluTnBkR1VpTzNNNk1Eb2lJanR6T2pVNkltRmliM1YwSWp0ek9qQTZJaUk3ZlE9PSI7czozOiJsdHMiO3M6MTA6IjE1OTg4MzQwNzkiO3M6MzoiYmFuIjtzOjE6IjAiO3M6NjoiYXZhdGFyIjtzOjI2OiJhdmF0YXJfZWdyZTU1X3Nwd3ZndWp3LnBocCI7czo2OiJlLWhpZGUiO3M6MDoiIjt9fX0=
+<?php die('Direct call - access denied'); ?>
+YToxOntzOjI6ImlkIjthOjE6e2k6MTU5MjQ4MzMwOTtzOjk6ImtpbS1zd2lmdCI7fX0=
+```
+
+Esse arquivo contém diversas informações em base64.
 
 #### Root.txt
 
