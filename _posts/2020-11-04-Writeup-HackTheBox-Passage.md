@@ -21,7 +21,7 @@ tags:
 | Criador                      | [ChefByzen](https://www.hackthebox.eu/home/users/profile/140851) |
 
 ## Hosts
-Adiconar o ip no arquivos "hosts" 
+Adicionar o ip e o domínio no arquivos "hosts" 
 
 Windows: `C:\Windows\System32\drivers\etc\hosts`
 
