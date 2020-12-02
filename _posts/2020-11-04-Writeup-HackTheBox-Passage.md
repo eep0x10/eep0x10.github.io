@@ -154,3 +154,11 @@ command >
 Pegamos o RCE
 
 ![RCE](https://media.makeameme.org/created/rce-rce-everywhere.jpg)
+
+## Post-Exploitation
+
+### Shell Upgrade
+
+### Privilege Escalation
+
+
