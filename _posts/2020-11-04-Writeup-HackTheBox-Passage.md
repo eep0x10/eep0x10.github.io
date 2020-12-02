@@ -20,7 +20,7 @@ tags:
 | IP                           | 10.10.10.206 |
 
 ## Scan
-[Rustscan](https://github.com/RustScan/RustScan)
+Tool: [Rustscan](https://github.com/RustScan/RustScan)
 ```terminal
 rustscan 10.10.10.206 -- -Pn -sV
 ```
