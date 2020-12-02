@@ -1,3 +1,4 @@
+![passage3.png]({{site.baseurl}}/assets/img/sample/passage3.png)
 ![Passage2.png]({{site.baseurl}}/assets/img/sample/Passage2.png)
 ![]({{site.baseurl}}/assets/img/sample/passage1.png)## A New Post
 
