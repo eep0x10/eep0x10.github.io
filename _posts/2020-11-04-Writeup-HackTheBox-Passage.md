@@ -442,7 +442,7 @@ drwxr-xr-x  2 paul paul 4096 Jul 21 10:44 Videos
 -rw-------  1 paul paul 1397 Sep  1 04:20 .xsession-errors.ol
 ```
 
-Dentro do diretório .ssh, existe a chave pública para o usuário `nadav`, portanto basta apenas conectarmos no usuário.
+Dentro do diretório .ssh, existe a chave pública do usuário `nadav`, portanto basta apenas conectarmos no usuário.
 
 ```terminal
 -rw-r--r--  1 paul paul  395 Jul 21 10:43 authorized_keys
