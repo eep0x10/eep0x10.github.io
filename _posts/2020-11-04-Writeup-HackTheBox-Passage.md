@@ -20,7 +20,8 @@ tags:
 | IP                           | 10.10.10.206 |
 
 ## Host
-Adiconar o ip no arquivos hosts (É necessário admin / root para editar o arquivo)
+Adiconar o ip no arquivos "hosts" 
+> É necessário **admin** / **root** para editar o arquivo
 ```
 10.10.10.206	passage.htb
 ```
