@@ -394,7 +394,8 @@ Agora basta quebrar o hash.
 
 Quebrando o hash, é possível obter a senha do usuário Paul: `atlanta1`
 
-Agora basta locar com o usuário e pegar a flag de user.
+Agora basta logar com o usuário e pegar a flag de user.
+
 ```terminal
 $ su paul
 Password: atlanta1
