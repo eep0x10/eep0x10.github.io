@@ -409,7 +409,7 @@ $ cat user.txt
 
 Agora precisamos escalar o privilégio para o usuário `nadav`.
 
-Dentro do diretório do paul, é possível perceber a pasta `.ssh`, a qual contém suas configurações do ssh e chaves.
+Dentro do diretório do paul, é possível perceber a pasta `.ssh`.
 
 ```terminal
 $ ls -la
