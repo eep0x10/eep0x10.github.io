@@ -1,5 +1,5 @@
 ---
-title: Writeups
+title: Notes
 type: archives
 published: true
 tittle: Notes
