@@ -59,7 +59,7 @@ msf6 auxiliary(scanner/smb/smb_version) > exploit
 [*] Auxiliary module execution completed
 ```
 
-Procurar um exploit para a versão
+Procurar um exploit para a versão do **Samba 2.2.1**
 
 ```terminal
 
@@ -101,7 +101,7 @@ whoami
 root
 ```
 
-Pegamos a shell do root
+Pegamos a shell do **root**
 
 ![Shell](https://i.redd.it/8wlaab8isi611.jpg)
 
