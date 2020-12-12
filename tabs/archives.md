@@ -15,3 +15,5 @@ tittle: Notes
 - [Root me](https://www.root-me.org/)
 - [PortSwigger](https://portswigger.net/web-security)
 - [Hack Me](https://hack.me/s/)
+
+- [Lab List OSCP](https://docs.google.com/spreadsheets/u/1/d/1dwSMIAPIam0PuRBkCiDI88pU3yzrqqHkDtBngUHNCw8/htmlview#)
