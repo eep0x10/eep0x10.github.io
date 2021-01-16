@@ -1,8 +1,7 @@
 ---
-title: Notes
+title: Links
 type: archives
 published: true
-tittle: Notes
 ---
 
 # Labs / CTF
