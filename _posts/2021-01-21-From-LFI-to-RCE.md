@@ -16,7 +16,7 @@ Além do upload de arquivos, permite-se encadear com a vulnerabilidade Path Tran
 
 > Normalmente o código malicioso enviado é um parâmetro que informa um comando que é executado posteriormente pelo servidor, levando a um RCE.
 
-![Mitre]([https://cwe.mitre.org/images/mitre_logo.gif](https://cwe.mitre.org/images/mitre_logo.gif)){: width="240" class="right"}
+![Mitre](https://cwe.mitre.org/images/mitre_logo.gif](https://cwe.mitre.org/images/mitre_logo.gif){: width="240" class="right"}
 
 Para que ocorra essa vulnerabilidade, 2 flags no PHP devem estar ligadas.
 
@@ -126,12 +126,12 @@ nc -v 10.10.10.10 80 -C
 
 Depois basta executar o comando via Browser ou Curl 
 
-**`curl http://adress -d 'parametro=comando'`**
-
-`[http://teste.com/?view=php://filter/convert.base64-encode/resource=../../../..//var/log/apache/access.log&](http://teste.com/?view=php://filter/convert.base64-encode/resource=../../../..//var/log/apache/access.log&)cmd=COMANDO`
+`curl http://adress -d 'parametro=comando'`
+ou
+`http://teste.com/?view=php://filter/convert.base64-encode/resource=../../../..//var/log/apache/access.log&](http://teste.com/?view=php://filter/convert.base64-encode/resource=../../../..//var/log/apache/access.log&)cmd=COMANDO`
 
 ![dog](https://miro.medium.com/max/700/1*xeRBVK28Z2H6UVajZyQtsg.png)
 
 A partir desse ponto, basta executar um comando de reverse shell :)
 
-[IMG3]([https://media.makeameme.org/created/rce-rce-everywhere.jpg](https://media.makeameme.org/created/rce-rce-everywhere.jpg))
+![IMG3]([https://media.makeameme.org/created/rce-rce-everywhere.jpg](https://media.makeameme.org/created/rce-rce-everywhere.jpg))
