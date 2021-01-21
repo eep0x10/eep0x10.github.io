@@ -16,7 +16,7 @@ Além do upload de arquivos, permite-se encadear com a vulnerabilidade Path Tran
 
 > Normalmente o código malicioso enviado é um parâmetro que informa um comando que é executado posteriormente pelo servidor, levando a um RCE.
 
-![Mitre](https://cwe.mitre.org/images/mitre_logo.gif](https://cwe.mitre.org/images/mitre_logo.gif){: width="240" class="right"}
+![Mitre](https://cwe.mitre.org/images/mitre_logo.gif)
 
 Para que ocorra essa vulnerabilidade, 2 flags no PHP devem estar ligadas.
 
@@ -134,4 +134,4 @@ ou
 
 A partir desse ponto, basta executar um comando de reverse shell :)
 
-![IMG3]([https://media.makeameme.org/created/rce-rce-everywhere.jpg](https://media.makeameme.org/created/rce-rce-everywhere.jpg))
+![IMG3](https://media.makeameme.org/created/rce-rce-everywhere.jpg)
