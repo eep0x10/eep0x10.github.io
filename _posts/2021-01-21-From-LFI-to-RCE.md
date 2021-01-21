@@ -1,3 +1,13 @@
+---
+published: true
+author: EEP0x10
+date: '2020-01-21'
+categories:
+  - SecInfo
+tags:
+  - CWE
+  - Article
+---
 # From LFI to RCE
 
 Local File Include é um termo usado para casos onde vulnerabilidade File Inclusion [CWE 98]([https://cwe.mitre.org/data/definitions/98.html](https://cwe.mitre.org/data/definitions/98.html)) ocorre em um cenário específico, onde o download de arquivos remotos está desabilitado, assim necessitando explorar essa falha de outra forma, enviado um arquivo localmente via alguma funcionalidade de upload dentro da aplicação ou por meio de parâmetros que não tratam corretamente a entrada de dados.
