@@ -16,7 +16,7 @@ Além do upload de arquivos, permite-se encadear com a vulnerabilidade Path Tran
 
 > Normalmente o código malicioso enviado é um parâmetro que informa um comando que é executado posteriormente pelo servidor, levando a um RCE.
 
-![Mitre](https://cwe.mitre.org/images/mitre_logo.gif)
+![Mitre](https://cwe.mitre.org/images/mitre_logo.gif){: width="240" class="right"}
 
 Para que ocorra essa vulnerabilidade, 2 flags no PHP devem estar ligadas.
 
@@ -65,7 +65,7 @@ Provavelmente a aplicação está auto completando no valor informado no parâme
 
 `http://teste.com/?view=../../../../etc/passwd%00`
 
-[IMG]([https://www.aptive.co.uk/wp-content/uploads/2017/02/lfi-example-etc-passwd.png](https://www.aptive.co.uk/wp-content/uploads/2017/02/lfi-example-etc-passwd.png))
+![IMG](https://www.aptive.co.uk/wp-content/uploads/2017/02/lfi-example-etc-passwd.png)
 
 Caso  retorne um erro no PHP, será necessário passar o conteúdo em base64 via [PHP Wrappers]([https://www.php.net/manual/pt_BR/wrappers.php](https://www.php.net/manual/pt_BR/wrappers.php))
 
@@ -73,7 +73,7 @@ Caso  retorne um erro no PHP, será necessário passar o conteúdo em base64 via
 
 `http://teste.com/?view=php://filter/convert.base64-encode/resource=../../../../etc/passwd`
 
-[IMG2]([https://img.wonderhowto.com/img/55/68/63694277579296/0/beat-lfi-restrictions-with-advanced-techniques.w1456.jpg](https://img.wonderhowto.com/img/55/68/63694277579296/0/beat-lfi-restrictions-with-advanced-techniques.w1456.jpg))
+![IMG2](https://img.wonderhowto.com/img/55/68/63694277579296/0/beat-lfi-restrictions-with-advanced-techniques.w1456.jpg)
 
 > O retorno será todo em base64, portando será necessário descriptografar
 Um bom site é o [Base64 Decode]([https://www.base64decode.org/](https://www.base64decode.org/))
