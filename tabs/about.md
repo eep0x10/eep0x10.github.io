@@ -2,16 +2,8 @@
 title: $ whoami
 published: true
 ---
-# PT-BR
-Estudante de Ciência da Computação 
-- Web Pentest Applications
-- CTF's, HTB, THM
-- Python
-- Linux
+![HTB](https://www.hackthebox.eu/badge/image/212157)
 
-Criei o blog com objetivo de documentar meu aprendizado na área de segurança, compartilhar minhas experiências e falar a respeito de assuntos que tenho interesse, então sinta-se livre para criticar, corrigir ou complementar meus posts, pois  meu maior foco é o aprendizado.
-
-# English
 Computer Science Student
 - Web Pentest Applications
 - CTF’s, HTB, THM
