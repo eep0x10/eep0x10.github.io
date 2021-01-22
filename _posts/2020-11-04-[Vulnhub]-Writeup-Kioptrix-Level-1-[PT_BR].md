@@ -1,4 +1,5 @@
 ---
+title: [VulnHub] Writeup Kioptrix [pt-br]
 published: true
 author: EEP0x10
 date: '2020-12-12'
