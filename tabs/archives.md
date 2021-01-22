@@ -9,29 +9,6 @@ published: true
 # MIT License
 ---
 
-# Links
-
-## CTF
-- [/Hack the Box](https://www.hackthebox.eu/home)
-- [/Try Hack Me](https://www.tryhackme.com/)
-- [/Over the Wire](https://overthewire.org/)
-- [/Root me](https://www.root-me.org/)
-- [/Hack Me](https://hack.me/s/)
-
-## Labs
-- [/Cybersec Labs](https://www.cyberseclabs.co.uk/)
-- [/OffSec](https://www.offensive-security.com/labs/)
-- [/PortSwigger](https://portswigger.net/web-security)
-
-## Misc
-- [/Lab List OSCP](https://docs.google.com/spreadsheets/u/1/d/1dwSMIAPIam0PuRBkCiDI88pU3yzrqqHkDtBngUHNCw8/htmlview#)
-
-<br>
-# Timeline
-<br>
-<br>
-<br>
-
 <div id="archives" class="pl-xl-2">
 {% for post in site.posts %}
   {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
