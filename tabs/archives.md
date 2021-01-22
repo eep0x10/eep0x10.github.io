@@ -1,25 +1,58 @@
 ---
-title: $ find / -name link 2>&- 1>./data.txt
+title: Archives
 type: archives
 published: true
+# The Archives of posts.
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
+# © 2017-2019 Cotes Chung
+# MIT License
 ---
 
-# cat data.txt
+# Links
 
-## | grep "CTF"
-
+## CTF
 - [/Hack the Box](https://www.hackthebox.eu/home)
 - [/Try Hack Me](https://www.tryhackme.com/)
 - [/Over the Wire](https://overthewire.org/)
 - [/Root me](https://www.root-me.org/)
 - [/Hack Me](https://hack.me/s/)
 
-## | grep "Labs"
-
+## Labs
 - [/Cybersec Labs](https://www.cyberseclabs.co.uk/)
 - [/OffSec](https://www.offensive-security.com/labs/)
 - [/PortSwigger](https://portswigger.net/web-security)
 
-## | grep "Misc"
-
+## Misc
 - [/Lab List OSCP](https://docs.google.com/spreadsheets/u/1/d/1dwSMIAPIam0PuRBkCiDI88pU3yzrqqHkDtBngUHNCw8/htmlview#)
+
+<div id="archives" class="pl-xl-2">
+{% for post in site.posts %}
+  {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+  {% capture pre_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+  {% if forloop.first %}
+    {% assign last_day = "" %}
+    {% assign last_month = "" %}
+  <span class="lead">{{this_year}}</span>
+  <ul class="list-unstyled">
+  {% endif %}
+    <li>
+      <div>
+        {% capture this_day %}{{ post.date | date: "%d" }}{% endcapture %}
+        {% capture this_month %}{{ post.date | date: "%b" }}{% endcapture %}
+        <span class="date day">{{ this_day }}</span>
+        <span class="date month small text-muted">{{ this_month }}</span>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </div>
+    </li>
+  {% if forloop.last %}
+  </ul>
+  {% elsif this_year != pre_year %}
+  </ul>
+  <span class="lead">{{pre_year}}</span>
+  <ul class="list-unstyled">
+    {% assign last_day = "" %}
+    {% assign last_month = "" %}
+  {% endif %}
+{% endfor %}
+</div>
