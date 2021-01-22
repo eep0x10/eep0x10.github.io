@@ -1,5 +1,5 @@
 ---
-title: Archives
+title: $ history
 type: archives
 published: true
 # The Archives of posts.
