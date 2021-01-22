@@ -1,5 +1,5 @@
 ---
-title: <Article> From LFI to RCE <pt-br>
+title: {Article} From LFI to RCE {pt-br}
 published: true
 author: EEP0x10
 date: '2020-01-21'
