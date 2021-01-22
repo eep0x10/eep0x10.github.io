@@ -2,7 +2,7 @@
 title: 【Article】 From LFI to RCE (pt-br)
 published: true
 author: EEP0x10
-date: '2020-01-21'
+date: '2021-01-21'
 categories:
   - SecInfo
 tags:
