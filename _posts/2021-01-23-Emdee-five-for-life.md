@@ -15,20 +15,20 @@ tags:
 |:-----------------------------|:-------------|
 | Dificuldade                  | Fácil         |
 | Pontos                       | 20            |
-| Lançamento                   | 23/10/2020   | 
+| Lançamento                   | 21/05/2019   | 
 | Criador                      | [L4mpje](https://www.hackthebox.eu/home/users/profile/29267) |
 
 Ao acessar a aplicação via browser, é retornado a seguinte tela.
 
 ![page](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/118988a4-52af-4aa2-bca6-77662f806b68/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210123T223324Z&X-Amz-Expires=86400&X-Amz-Signature=726139f9bd8ecad21f419bdf62c38b27584e073ff6e280721bcf19cdde364fdd&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
-O laboratório informa que o desafio é criptografar o hash MD5 informado e submeter rápido.
+O laboratório informa que o desafio é criptografar o hash `MD5` informado e submeter rápido.
 
 # flag.txt
 
-A única maneira de fazer esse processo rápido, é por meio de um script: (no caso foi feito em python)
+A única maneira de fazer esse processo rápido, é por meio de um script: 
 
-<br>
+*no caso foi feito em python* 
 
 ```python
 import requests # Lib para enviar requisições 
