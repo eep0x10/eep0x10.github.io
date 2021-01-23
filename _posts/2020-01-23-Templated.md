@@ -1,5 +1,3 @@
-# Templated
-
 ---
 title:【HTB】Challenge Templated (pt-br)
 published: true
@@ -22,7 +20,7 @@ Ao tentar acessar outra páginas, é retornado o seguinte erro.
 
 Por conta do erro retornado, e da informação na página inicial a respeito da tecnologia usada (Jinja2), é possível deduzir que a vulnerabilidade referente ao desafio se trata da SSTI (Server Side Template Injection)
 
-> Jinja2 é uma template engine, escrito em python presente no micro-framework web Flask.      (*mais informações*)[[https://www.treinaweb.com.br/blog/o-que-e-o-jinja2/](https://www.treinaweb.com.br/blog/o-que-e-o-jinja2/)]
+> Jinja2 é uma template engine, escrito em python presente no micro-framework web Flask.      [*mais informações*](https://www.treinaweb.com.br/blog/o-que-e-o-jinja2/)
 
 Para validar se a aplicação web é vulnerável a SSTI, é necessário informar uma conta matemática e verificar se ao renderizar é retornado o resultado.
 
@@ -38,7 +36,7 @@ Por se tratar de um site feito em Jinja2, basta validar se o payload {{7*7}} ret
 
 Após validar que a aplicação é vulnerável, basta usar o payload correto referente a engine usada na aplicação para conseguir o RCE
 
-(SSTI Jinja2)[[https://www.onsecurity.io/blog/server-side-template-injection-with-jinja2/](https://www.onsecurity.io/blog/server-side-template-injection-with-jinja2/)]
+[SSTI Jinja2](https://www.onsecurity.io/blog/server-side-template-injection-with-jinja2/)
 
 Payload Usado: `{{request.application.**globals**.**builtins**.**import**('os').popen('id').read()}}`
 
