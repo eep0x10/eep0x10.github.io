@@ -9,6 +9,13 @@ tags:
   - htb
   - Challenge
 ---
+## Informações
+
+|:-----------------------------|:-------------|
+| Dificuldade                  | Fácil         |
+| Pontos                       | 20            |
+| Lançamento                   | 23/10/2020   | 
+| Criador                      | [clubby789](https://www.hackthebox.eu/home/users/profile/83743) |
 
 Ao acessar a aplicação via browser, é retornado a seguinte tela.
 
