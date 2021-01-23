@@ -26,7 +26,7 @@ Para validar se a aplicação web é vulnerável a SSTI, é necessário informar
 
 ![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1509631d-66d0-41d8-a5f5-6cdbb7535b50/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210123T031641Z&X-Amz-Expires=86400&X-Amz-Signature=c4b6c62d750b3f91330fe57e02b9343044128345c0b1f905069297d7e6410534&X-Amz-SignedHeaders=host&response-content-disposition=filename %3D"Untitled.png"](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1509631d-66d0-41d8-a5f5-6cdbb7535b50/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210123T031641Z&X-Amz-Expires=86400&X-Amz-Signature=c4b6c62d750b3f91330fe57e02b9343044128345c0b1f905069297d7e6410534&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
-Por se tratar de um site feito em Jinja2, basta validar se o payload {{7*7}} retorna o resultado 49.
+Por se tratar de um site feito em Jinja2, basta validar se o payload `{{7*7}}` retorna o resultado 49.
 
 ![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4ad33801-8d3b-4b35-af51-f8b26c6a3b9e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210123T031645Z&X-Amz-Expires=86400&X-Amz-Signature=f09a5e727d86a6fda4bba24b345d9e321598cabb9d81dd2663aae715fdcaeb1b&X-Amz-SignedHeaders=host&response-content-disposition=filename %3D"Untitled.png"](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4ad33801-8d3b-4b35-af51-f8b26c6a3b9e/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210123T031645Z&X-Amz-Expires=86400&X-Amz-Signature=f09a5e727d86a6fda4bba24b345d9e321598cabb9d81dd2663aae715fdcaeb1b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
@@ -44,7 +44,7 @@ Payload Usado: `{{request.application.**globals**.**builtins**.**import**('os').
 
 ![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/85df6ea5-f109-454c-bfe3-05b4b968d612/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210123T031649Z&X-Amz-Expires=86400&X-Amz-Signature=2603e89406b40c3e3ac7722afe81c9372bd94095aeeaa3ef95b505208083d49d&X-Amz-SignedHeaders=host&response-content-disposition=filename %3D"Untitled.png"](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/85df6ea5-f109-454c-bfe3-05b4b968d612/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210123T031649Z&X-Amz-Expires=86400&X-Amz-Signature=2603e89406b40c3e3ac7722afe81c9372bd94095aeeaa3ef95b505208083d49d&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
-para executar comandos com espaço (ls -la), é necessário encodar para URL
+para executar comandos com espaço `(ls -la)`, é necessário encodar para URL
 
 ![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/63f789b9-65e4-47b8-b8e0-35d4aa79426a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210123T031652Z&X-Amz-Expires=86400&X-Amz-Signature=f675629b352db668523da5bf1154027f178159da7803c102df8624cdc86976ff&X-Amz-SignedHeaders=host&response-content-disposition=filename %3D"Untitled.png"](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/63f789b9-65e4-47b8-b8e0-35d4aa79426a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210123T031652Z&X-Amz-Expires=86400&X-Amz-Signature=f675629b352db668523da5bf1154027f178159da7803c102df8624cdc86976ff&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
@@ -55,7 +55,6 @@ para executar comandos com espaço (ls -la), é necessário encodar para URL
 ![https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5023ae8b-c257-4c68-9e6c-301c5abd4bdd/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210123T031655Z&X-Amz-Expires=86400&X-Amz-Signature=bd6b12a5a848092fd752c3714154ecd21ae0f1900568449314505a91baf9dacb&X-Amz-SignedHeaders=host&response-content-disposition=filename %3D"Untitled.png"](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/5023ae8b-c257-4c68-9e6c-301c5abd4bdd/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210123T031655Z&X-Amz-Expires=86400&X-Amz-Signature=bd6b12a5a848092fd752c3714154ecd21ae0f1900568449314505a91baf9dacb&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
 
 <br>
-
-Flag capturada!
-
+## Flag capturada!
 ![https://i.ytimg.com/vi/7f94Z--PJdc/hqdefault.jpg](https://i.ytimg.com/vi/7f94Z--PJdc/hqdefault.jpg)
+
