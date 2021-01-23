@@ -1,5 +1,3 @@
-# Emdee five for life
-
 ---
 title: 【HTB】Challenge Emdee five for life (pt-br)
 published: true
