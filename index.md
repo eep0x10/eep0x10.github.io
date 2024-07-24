@@ -5,4 +5,6 @@
 
 # Some Stuff...
 
-<a href=./games> iFrame Games to XSS POC </a>
+* https://eep0x10.github.io/games.html
+
+* https://eep0x10.github.io/htmlsmuggling.html
