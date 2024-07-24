@@ -3,7 +3,7 @@
 
 # My Notes 😎
 
-https://eep0x10.notion.site/Python-py-28226964817e495ead8951de05d1202d
+[Python](https://eep0x10.notion.site/Python-py-28226964817e495ead8951de05d1202d)
 
 # Some Stuff...
 
