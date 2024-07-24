@@ -1,5 +1,8 @@
-## Welcome to my page!
+## Bem vindo ao meu blog :) !
 ### FLAG{Y0u_g0t_all_Fl4gs?}
 
+# My Notes 😎
 
-<iframe src="https://archive.org/embed/DukeNukem" width="600" height="450" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>
+# Some Stuff...
+
+<a href=./games> iFrame Games to XSS POC </a>
