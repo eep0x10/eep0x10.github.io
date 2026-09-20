@@ -1,12 +1,24 @@
-![eep0x10.github.io — Publicação estática e referências do projeto.](docs/assets/banner.svg)
+<div align="center">
+
+<img src="docs/assets/banner.png" alt="eep0x10.github.io — ilustração de marca" width="100%">
 
 # eep0x10.github.io
 
-**Publicação estática e referências do projeto.**
+### Um espaço para publicar ideias.
+
+Repositório de publicação estática associado ao perfil `eep0x10`. A configuração versionada utiliza o tema **jekyll-theme-hacker**; a entrada de conteúdo é `index.md`.
+
+[![Site: Jekyll](https://img.shields.io/badge/Site-Jekyll-34495e?style=flat-square)](_config.yml) [![Tema: Hacker](https://img.shields.io/badge/Tema-Hacker-34495e?style=flat-square)](_config.yml)
 
 [Estrutura editorial](#estrutura-editorial) · [Manutenção](#manutenção) · [Publicação e validação](#publicação-e-validação)
 
-Repositório de publicação estática associado ao perfil `eep0x10`. A configuração versionada utiliza o tema **jekyll-theme-hacker**; a entrada de conteúdo é `index.md`.
+</div>
+
+> O banner é uma ilustração conceitual de marca criada com IA; não é uma captura da aplicação nem comprovação de um resultado real.
+
+| Organize | Revise | Publique |
+| :--- | :--- | :--- |
+| Mantenha conteúdo e configuração separados. | Confira links e o escopo dos arquivos públicos. | Use as configurações de Pages do repositório. |
 
 ## Estrutura editorial
 
